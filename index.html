@@ -3,12 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
     <title>YOLOv8 Object Detection</title>
-    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
-    <input type="file" id="uploadInput">
-    <canvas></canvas>
+    <div class="header">TRAFFIC LIGHT DETECTOR</div>
+    <div class="description">Upload any image file of a traffic light configuration and the model will recognize and classify the image.</div>
+    <div class="input">
+        <input type="file" id="uploadInput">
+    </div>
+    <div class="image">
+        <canvas></canvas>
+    </div>
     <script>
 
        const input = document.getElementById("uploadInput");

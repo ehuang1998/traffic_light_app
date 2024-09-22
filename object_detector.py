@@ -1,5 +1,5 @@
 from ultralytics import YOLO
-from flask import request, Response, Flask
+from flask import request, Response, Flask, send_from_directory
 from waitress import serve
 from PIL import Image
 import json
@@ -20,6 +20,10 @@ def detect():
       json.dumps(boxes),  
       mimetype='application/json'
     )
+
+@app.route('/styles.css')
+def styles():
+    return send_from_directory('.', 'styles.css')
 
 
 def detect_objects_on_image(buf):
